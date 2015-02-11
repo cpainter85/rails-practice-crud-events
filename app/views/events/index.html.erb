@@ -10,6 +10,9 @@
     <th>
 
     </th>
+    <th>
+
+    </th>
   </thead>
   <tbody>
     <% @events.each do |event| %>
@@ -31,6 +34,9 @@
         </td>
         <td>
           <%= link_to "edit", edit_event_path(event) %>
+        </td>
+        <td>
+          <%= link_to 'delete', event_path(event), method: 'delete', data: {confirm: 'Are you sure you want to delete this event?'} %>
         </td>
       </tr>
     <% end %>
